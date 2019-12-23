@@ -17,6 +17,7 @@
 /log/*.log*
 /log/mongrel_debug
 /plugins/*
+!/plugins/redmine_agile
 !/plugins/README
 /public/dispatch.*
 /public/themes/*
