@@ -16,8 +16,7 @@ default:
 
   # ==== Simple SMTP server at localhost
   #
-   default
-    email_delivery:
+     email_delivery:
      delivery_method: :smtp
   #    smtp_settings:
   #      address: "localhost"
