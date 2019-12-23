@@ -20,6 +20,7 @@
 !/plugins/README
 /public/dispatch.*
 /public/themes/*
+!/public/themes/purple
 !/public/themes/alternate
 !/public/themes/classic
 !/public/themes/README
