@@ -3586,7 +3586,7 @@ class IssuesControllerTest < Redmine::ControllerTest
 
     assert_not_nil ActionMailer::Base.deliveries.last
     assert_select_email do
-      assert_select 'a[href^=?]', 'http://localhost:3000/attachments/download', 'testfile.txt'
+      assert_select 'a[href^=?]', 'https://redmine-hdn.herokuapp.com/attachments/download', 'testfile.txt'
     end
   end
 

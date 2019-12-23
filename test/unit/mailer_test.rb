@@ -144,7 +144,7 @@ class MailerTest < ActiveSupport::TestCase
     Mailer.deliver_issue_edit(journal)
     assert_not_nil last_email
     assert_select_email do
-      assert_select 'a[href=?]', 'http://localhost:3000/issues/2', :text => 'Feature request #2'
+      assert_select 'a[href=?]', 'https://redmine-hdn.herokuapp.com/issues/2', :text => 'Feature request #2'
     end
   end
 
@@ -286,7 +286,7 @@ class MailerTest < ActiveSupport::TestCase
     assert_select_email do
       # link to the update
       assert_select "a[href=?]",
-                    "http://localhost:3000/issues/#{journal.journalized_id}#change-#{journal.id}"
+                    "https://redmine-hdn.herokuapp.com/issues/#{journal.journalized_id}#change-#{journal.id}"
     end
   end
 
@@ -299,7 +299,7 @@ class MailerTest < ActiveSupport::TestCase
     assert_select_email do
       # link to the message
       assert_select "a[href=?]",
-                    "http://localhost:3000/boards/#{message.board.id}/topics/#{message.id}",
+                    "https://redmine-hdn.herokuapp.com/boards/#{message.board.id}/topics/#{message.id}",
                     :text => message.subject
     end
   end
@@ -313,7 +313,7 @@ class MailerTest < ActiveSupport::TestCase
     assert_select_email do
       # link to the reply
       assert_select "a[href=?]",
-                    "http://localhost:3000/boards/#{message.board.id}/topics/#{message.root.id}?r=#{message.id}#message-#{message.id}",
+                    "https://redmine-hdn.herokuapp.com/boards/#{message.board.id}/topics/#{message.root.id}?r=#{message.id}#message-#{message.id}",
                     :text => message.subject
     end
   end
@@ -475,7 +475,7 @@ class MailerTest < ActiveSupport::TestCase
     assert_not_nil last_email.bcc
     assert last_email.bcc.any?
     assert_select_email do
-      assert_select "a[href=?]", "http://localhost:3000/projects/ecookbook/files"
+      assert_select "a[href=?]", "https://redmine-hdn.herokuapp.com/projects/ecookbook/files"
     end
   end
 
@@ -485,7 +485,7 @@ class MailerTest < ActiveSupport::TestCase
     assert_not_nil last_email.bcc
     assert last_email.bcc.any?
     assert_select_email do
-      assert_select "a[href=?]", "http://localhost:3000/projects/ecookbook/files"
+      assert_select "a[href=?]", "https://redmine-hdn.herokuapp.com/projects/ecookbook/files"
     end
   end
 
@@ -530,7 +530,7 @@ class MailerTest < ActiveSupport::TestCase
         assert Mailer.wiki_content_added(content).deliver
         assert_select_email do
           assert_select 'a[href=?]',
-            'http://localhost:3000/projects/ecookbook/wiki/CookBook_documentation',
+            'https://redmine-hdn.herokuapp.com/projects/ecookbook/wiki/CookBook_documentation',
             :text => 'CookBook documentation'
         end
       end
@@ -544,7 +544,7 @@ class MailerTest < ActiveSupport::TestCase
         assert Mailer.wiki_content_updated(content).deliver
         assert_select_email do
           assert_select 'a[href=?]',
-            'http://localhost:3000/projects/ecookbook/wiki/CookBook_documentation',
+            'https://redmine-hdn.herokuapp.com/projects/ecookbook/wiki/CookBook_documentation',
             :text => 'CookBook documentation'
         end
       end
@@ -579,8 +579,8 @@ class MailerTest < ActiveSupport::TestCase
       mail = last_email
       assert_select_email do
         assert_select "a[href=?]",
-                      "http://localhost:3000/account/activate?token=#{token.value}",
-                      :text => "http://localhost:3000/account/activate?token=#{token.value}"
+                      "https://redmine-hdn.herokuapp.com/account/activate?token=#{token.value}",
+                      :text => "https://redmine-hdn.herokuapp.com/account/activate?token=#{token.value}"
       end
     end
   end
@@ -754,7 +754,7 @@ class MailerTest < ActiveSupport::TestCase
       ).deliver
       assert_select_email do
         assert_select "h1", false
-        assert_select 'a[href=?]', 'http://localhost:3000/my/account', :text => I18n.t(:label_my_account)
+        assert_select 'a[href=?]', 'https://redmine-hdn.herokuapp.com/my/account', :text => I18n.t(:label_my_account)
       end
     end
   end

@@ -165,7 +165,7 @@ class SettingsControllerTest < Redmine::ControllerTest
     assert_mail_body_match '0.0.0.0', mail
     assert_mail_body_match I18n.t(:setting_login_required), mail
     assert_select_email do
-      assert_select 'a[href^=?]', 'http://localhost:3000/settings'
+      assert_select 'a[href^=?]', 'https://redmine-hdn.herokuapp.com/settings'
     end
     # All admins should receive this
     recipients = [mail.bcc, mail.cc].flatten

@@ -302,7 +302,7 @@ class UsersControllerTest < Redmine::ControllerTest
     assert_mail_body_match '0.0.0.0', mail
     assert_mail_body_match I18n.t(:mail_body_security_notification_add, field: I18n.t(:field_admin), value: 'eschmoe'), mail
     assert_select_email do
-      assert_select 'a[href^=?]', 'http://localhost:3000/users', :text => 'Users'
+      assert_select 'a[href^=?]', 'https://redmine-hdn.herokuapp.com/users', :text => 'Users'
     end
 
     # All admins should receive this

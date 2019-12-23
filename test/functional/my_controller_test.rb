@@ -274,7 +274,7 @@ class MyControllerTest < Redmine::ControllerTest
     assert_mail_body_match '0.0.0.0', mail
     assert_mail_body_match I18n.t(:mail_body_security_notification_change_to, field: I18n.t(:field_mail), value: 'foobar@example.com'), mail
     assert_select_email do
-      assert_select 'a[href^=?]', 'http://localhost:3000/my/account', :text => 'My account'
+      assert_select 'a[href^=?]', 'https://redmine-hdn.herokuapp.com/my/account', :text => 'My account'
     end
     # The old email address should be notified about the change for security purposes
     assert [mail.bcc, mail.cc].flatten.include?(User.find(2).mail)
@@ -382,7 +382,7 @@ class MyControllerTest < Redmine::ControllerTest
     assert_not_nil (mail = ActionMailer::Base.deliveries.last)
     assert_mail_body_no_match 'secret123', mail # just to be sure: pw should never be sent!
     assert_select_email do
-      assert_select 'a[href^=?]', 'http://localhost:3000/my/password', :text => 'Change password'
+      assert_select 'a[href^=?]', 'https://redmine-hdn.herokuapp.com/my/password', :text => 'Change password'
     end
   end
 

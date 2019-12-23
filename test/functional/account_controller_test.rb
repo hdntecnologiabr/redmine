@@ -390,7 +390,7 @@ class AccountControllerTest < Redmine::ControllerTest
     assert_equal 'recovery', token.action
 
     assert_select_email do
-      assert_select "a[href=?]", "http://localhost:3000/account/lost_password?token=#{token.value}"
+      assert_select "a[href=?]", "https://redmine-hdn.herokuapp.com/account/lost_password?token=#{token.value}"
     end
   end
 
@@ -504,7 +504,7 @@ class AccountControllerTest < Redmine::ControllerTest
     assert_nil Token.find_by_id(token.id), "Token was not deleted"
     assert_not_nil (mail = ActionMailer::Base.deliveries.last)
     assert_select_email do
-      assert_select 'a[href^=?]', 'http://localhost:3000/my/password', :text => 'Change password'
+      assert_select 'a[href^=?]', 'https://redmine-hdn.herokuapp.com/my/password', :text => 'Change password'
     end
   end
 

@@ -130,7 +130,7 @@ class EmailAddressesControllerTest < Redmine::ControllerTest
     assert_mail_body_match '0.0.0.0', mail
     assert_mail_body_match I18n.t(:mail_body_security_notification_add, field: I18n.t(:field_mail), value: 'something@example.fr'), mail
     assert_select_email do
-      assert_select 'a[href^=?]', 'http://localhost:3000/my/account', :text => 'My account'
+      assert_select 'a[href^=?]', 'https://redmine-hdn.herokuapp.com/my/account', :text => 'My account'
     end
     # The old email address should be notified about a new address for security purposes
     assert [mail.bcc, mail.cc].flatten.include?(User.find(2).mail)
