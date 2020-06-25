@@ -19,6 +19,7 @@
 /plugins/*
 !/plugins/redmine_agile
 !/plugins/redmine_objectstorage
+!/plugins/amazon_s3
 !/plugins/README
 /public/dispatch.*
 /public/themes/*
