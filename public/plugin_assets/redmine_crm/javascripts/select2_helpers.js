@@ -137,6 +137,7 @@ function buildSelect2Options(options) {
   result = {
     placeholder: options['placeholder'] || '',
     allowClear: !!options['allow_clear'],
+    containerCssClass: options['containerCssClass'],
     minimumInputLength: options['min_input_length'] || 0,
     templateResult: window[options['format_state']],
     templateSelection: window[options['format_selection']],
