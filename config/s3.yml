@@ -1,0 +1,29 @@
+production:
+  access_key_id: AKIAJ4ZTYRTU5ACIKBHA
+  secret_access_key: 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
+  bucket: gestao.hdnit.com.br
+  folder:
+  endpoint:
+  secure:
+  private:
+  expires:
+  proxy:
+  thumb_folder:
+
+development:
+  access_key_id:
+  secret_access_key:
+  bucket:
+  folder:
+  endpoint:
+  secure:
+  private:
+  expires:
+  proxy:
+  thumb_folder:
+
+# Uncomment this to run plugin tests with standart redmine script
+# test:
+#   access_key_id:
+#   secret_access_key:
+#   bucket:
