@@ -18,6 +18,7 @@ gem "roadie", "~> 3.2.1"
 gem "mimemagic"
 gem "mail", "~> 2.6.4"
 
+gem 'redmine_crm'
 
 gem 'net-ssh'
 gem 'xmlrpc'
