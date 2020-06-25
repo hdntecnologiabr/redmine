@@ -294,7 +294,6 @@ DEPENDENCIES
   simplecov (~> 0.9.1)
   sprockets (~> 3.7.2)
   test_after_commit (~> 0.4.2)
-  tzinfo-data
   yard
 
 BUNDLED WITH
