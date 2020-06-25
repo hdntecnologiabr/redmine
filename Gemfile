@@ -17,6 +17,7 @@ gem "roadie-rails", "~> 1.1.1"
 gem "roadie", "~> 3.2.1"
 gem "mimemagic"
 gem "mail", "~> 2.6.4"
+gem 'aws-sdk'
 gem 'net-ssh'
 gem 'xmlrpc'
 gem "nokogiri", (RUBY_VERSION >= "2.1" ? "~> 1.8.1" : "~> 1.6.8")
