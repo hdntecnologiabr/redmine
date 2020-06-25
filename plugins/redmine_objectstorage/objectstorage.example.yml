@@ -1,0 +1,6 @@
+production:
+  access_key_id: AKIAJ4ZTYRTU5ACIKBHA
+  secret_access_key: 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
+  bucket: gestao.hdnit.com.br
+  endpoint: gestao.hdnit.com.br
+  #signature_version: 2 # some storage backends are compatible only with signature version 2

@@ -18,6 +18,7 @@
 /log/mongrel_debug
 /plugins/*
 !/plugins/redmine_agile
+!/plugins/redmine_objectstorage
 !/plugins/README
 /public/dispatch.*
 /public/themes/*
