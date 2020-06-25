@@ -1,16 +1,16 @@
 production:
 
   # AWS access key (required)
-  access_key_id: AKIAJ4ZTYRTU5ACIKBHA
+  access_key_id:
 
   # AWS secret key (required)
-  secret_access_key: S0SkxMEwwrQuNlKDoQmu2IMM7ZxZMVRFL4OhpM2T
+  secret_access_key:
 
   # Bucket name (required)
-  bucket: gestao.hdnit.com.br
+  bucket:
 
   # Identifier for the region in which the bucket was created (required)
-  region: America/Sao_Paulo
+  region:
 
   # Folder name inside bucket where uploaded files should be stored (e.g. 'attachments')
   # The default behavior is to store data in the bucket's root directory
